@@ -2372,7 +2372,7 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     NSDictionary *keyboardInfo = [notification userInfo];
     CGRect keyboardFrame = [keyboardInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardFrame = [self.tableView.window convertRect:keyboardFrame toView:self.tableView.superview];
-    CGFloat heightOfTableViewThatIsCoveredByKeyboard = self.tableView.frame.origin.y + self.tableView.frame.size.height - keyboardFrame.origin.y;
+    CGFloat heightOfTableViewThatIsCoveredByKeyboard = self.tableView.frame.origin.y + self.tableView.frame.size.height - keyboardFrame.origin.y + 42;
     CGFloat heightOfTableViewThatIsNotCoveredByKeyboard = self.tableView.frame.size.height - heightOfTableViewThatIsCoveredByKeyboard;
     
     UIEdgeInsets tableContentInset = self.tableView.contentInset;
