@@ -2377,10 +2377,10 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     
     UIEdgeInsets tableContentInset = self.tableView.contentInset;
     self.originalTableContentInset = tableContentInset;
-    tableContentInset.bottom = heightOfTableViewThatIsCoveredByKeyboard + 42;
+    tableContentInset.bottom = heightOfTableViewThatIsCoveredByKeyboard + self.offsetForKeyboard;
     
     UIEdgeInsets tableScrollIndicatorInsets = self.tableView.scrollIndicatorInsets;
-    tableScrollIndicatorInsets.bottom += heightOfTableViewThatIsCoveredByKeyboard + 42;
+    tableScrollIndicatorInsets.bottom += heightOfTableViewThatIsCoveredByKeyboard + self.offsetForKeyboard;
     
     [UIView beginAnimations:nil context:nil];
     
